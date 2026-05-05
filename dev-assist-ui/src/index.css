@@ -2,9 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-.input {
-  width: 100%;
-  padding: 8px;
-  background: #374151;
-  border-radius: 6px;
+* {
+  box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c7d2fe;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #475569;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease;
+}
+
